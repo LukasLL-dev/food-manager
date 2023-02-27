@@ -11,12 +11,15 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.food_manager.databinding.ActivityMainBinding
 
+//MainActivity extends from AppCompatActivity giving it more functionality
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    //runs on the start of the app
     override fun onCreate(savedInstanceState: Bundle?) {
+        //extend onCreate rather than completely overriding it
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
