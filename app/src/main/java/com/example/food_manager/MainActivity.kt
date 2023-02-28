@@ -1,6 +1,7 @@
 package com.example.food_manager
 
 import android.os.Bundle
+import android.view.Gravity
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,6 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.food_manager.databinding.ActivityMainBinding
 
 //MainActivity extends from AppCompatActivity giving it more functionality
@@ -17,10 +19,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+
     //runs on the start of the app
     override fun onCreate(savedInstanceState: Bundle?) {
         //extend onCreate rather than completely overriding it
         super.onCreate(savedInstanceState)
+
 
         //used to reference the xml activity_main.xml
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -33,8 +37,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar.make(view, "This button has no function yet =(", Snackbar.LENGTH_LONG)
+                .setAction("get more Information") {
+                    Toast.makeText(this, "This application is still work in progress.", Toast.LENGTH_SHORT).show()
+                }.show()
         }
     }
 
