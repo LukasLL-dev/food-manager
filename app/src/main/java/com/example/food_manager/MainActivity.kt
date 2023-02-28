@@ -13,7 +13,7 @@ import com.example.food_manager.databinding.ActivityMainBinding
 
 //MainActivity extends from AppCompatActivity giving it more functionality
 class MainActivity : AppCompatActivity() {
-
+    //initialize the vars later in onCreate
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         //extend onCreate rather than completely overriding it
         super.onCreate(savedInstanceState)
 
+        //used to reference the xml activity_main.xml
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
