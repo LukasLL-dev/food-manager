@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:title="General Settings">
+
+        <SwitchPreferenceCompat
+            app:key="enable_notifications"
+            app:title="Enable Notifications"
+            app:defaultValue="true"
+            app:summary="Turn on/off notifications" />
+
+        <!-- Add more preferences here -->
+
+    </PreferenceCategory>
+</PreferenceScreen>
