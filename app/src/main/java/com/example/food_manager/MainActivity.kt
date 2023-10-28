@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "This button has no function yet =(", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "This button has no function yet", Snackbar.LENGTH_LONG)
                 .setAction("get more Information") {
                     Toast.makeText(this, "This application is still work in progress.", Toast.LENGTH_SHORT).show()
                 }.show()
